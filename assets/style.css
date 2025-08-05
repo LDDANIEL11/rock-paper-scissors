@@ -48,8 +48,10 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: white;
-  padding: 85px;
+  /*change the background color to white after choosing ur hand*/
+  background-color: black;
+  /*padding when image display isnt none will be 85px*/
+  padding: 215px 175px;
   margin-top: 50px;
   border: 5px;
   border-style: solid;
@@ -125,7 +127,48 @@ body {
   border-color: coral;
 }
 
+.pic {
+  display: hidden;
+}
+
 img {
+  /*remove this line to make pics appear*/
+  display: none;
   width: 175px;
   height: 250px;
+}
+
+.overlay {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 1000px;
+  height: 500px;
+  /*these two lines down here make the overlay appear or disappear*/
+  background-color: none;
+  backdrop-filter: none;
+  z-index: 5;
+}
+
+.choose {
+  font-weight: 900;
+  color: black;
+  font-size: 20px;
+}
+
+.rps {
+  /*this display makes the button appear or disappear*/
+  display: none;
+  width: 250px;
+  height: 400px;
+  margin-top: 200px;
+}
+
+.overlay button {
+  padding: 0;
+  margin: 0;
+  background-color: white;
 }
