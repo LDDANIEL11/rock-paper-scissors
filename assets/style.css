@@ -138,6 +138,10 @@ body {
   border-radius: 8px;
 }
 
+#egami {
+  display: none;
+}
+
 .overlay {
   display: none;
   justify-content: space-evenly;
