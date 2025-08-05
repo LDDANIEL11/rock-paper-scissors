@@ -49,50 +49,103 @@ const computerSelection = getComputerChoice();
 
 playRound(computerSelection, humanSelection);
 */
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//what we need to begin the game
 let userScore = 0;
 let pcScore = 0;
 let resualt = document.querySelector(".resualt").textContent;
 let pcHand = "";
 let userHand = "";
+document.querySelector(".user-score").textContent = userScore;
+document.querySelector(".pc-score").textContent = pcScore;
 
+//random choice for pc
+let rand = Math.floor(Math.random() * 3) + 1;
+
+//game start , by hitting play button
 document.querySelector(".play").addEventListener("click", function () {
   document.querySelector(".overlay").style.display = "flex";
 });
 
-const scores = function () {
-  userScore = 0;
-  pcScore = 0;
-  document.querySelector(".user-score").textContent = userScore;
-  document.querySelector(".pc-score").textContent = pcScore;
-
-  for (let i = 0; i <= 10; i++) {
-    if (
-      (userHand == "rock" && pcHand == "scissors") ||
-      (userHand == "paper" && pcHand == "rock") ||
-      (userHand == "scissors" && pcHand == "paper")
-    ) {
-      userScore += 1;
-      document.querySelector(".body").Style.backgroundcolor = "#2c8810ff";
-    } else if (
-      (pcHand == "rock" && userHand == "scissors") ||
-      (pcHand == "paper" && userHand == "rock") ||
-      (pcHand == "scissors" && userHand == "paper")
-    ) {
-      pcScore += 1;
-      document.querySelector(".body").style.backgroundcolor = "#c01313ff";
-    } else if (userScore == 10) {
+//game start buttons after user clicks play button !
+let image = document.getElementById("image");
+let egami = document.getElementById("egami");
+//clicking Rock :
+document.querySelector(".rock").addEventListener("click", function () {
+  document.querySelector(".overlay").style.display = "none";
+  image.src = "rock.png";
+  document.querySelector(".user-hand").style.padding = "85px";
+  document.querySelector(".img").style.display = "flex";
+  if (egami.src == "siccors.png") {
+    userScore++;
+    if (userScore == 10) {
       document.querySelector(".resualt").style.display = "flex";
-    } else if (pcScore == 10) {
-      document.querySelector(".resualt").style.display = "flex";
+    }
+  } else if ((egami.src = "paper.png")) {
+    pcScore++;
+    if (pcScore == 10) {
       document.querySelector(".resualt").style.backgroundcolor = "#c01313ff";
+      document.querySelector(".resualt").style.display = "flex";
       resualt = "Lose !";
     }
   }
-};
+});
+//clicking Paper :
+document.querySelector(".paper").addEventListener("click", function () {
+  document.querySelector(".overlay").style.display = "none";
+  image.src = "paper.png";
+  document.querySelector(".user-hand").style.padding = "85px";
+
+  document.querySelector(".img").style.display = "flex";
+
+  if (egami.src == "rock.png") {
+    userScore++;
+    if (userScore == 10) {
+      document.querySelector(".resualt").style.display = "flex";
+    }
+  } else if (egami.src == "scissors.png") {
+    pcScore++;
+    if (pcScore == 10) {
+      document.querySelector(".resualt").style.backgroundcolor = "#c01313ff";
+      document.querySelector(".resualt").style.display = "flex";
+      resualt = "Lose !";
+    }
+  }
+});
+//clicking Scissors :
+document.querySelector(".scissors").addEventListener("click", function () {
+  document.querySelector(".overlay").style.display = "none";
+  image.src = "scissors.png";
+  document.querySelector(".user-hand").style.padding = "85px";
+
+  document.querySelector(".img").style.display = "flex";
+
+  if (egami.src == "paper.png") {
+    userScore++;
+    if (userScore == 10) {
+      document.querySelector(".resualt").style.display = "flex";
+    }
+  } else if (egami.src == "rock.png") {
+    pcScore++;
+    if (pcScore == 10) {
+      document.querySelector(".resualt").style.backgroundcolor = "#c01313ff";
+      document.querySelector(".resualt").style.display = "flex";
+      resualt = "Lose !";
+    }
+  }
+});
 
 const play = function () {
-  let rand = Math.floor(Math.random() * 3) + 1;
-
   if (rand == 1) {
     pcHand = "rock";
   } else if (rand == 2) {
@@ -101,14 +154,3 @@ const play = function () {
     pcHand = "scissors";
   }
 };
-
-//game start buttons after user clicks play button !
-document.querySelector(".rock").addEventListener("click", function () {
-  document.querySelector(".overlay").style.display = "none";
-});
-document.querySelector(".paper").addEventListener("click", function () {
-  document.querySelector(".overlay").style.display = "none";
-});
-document.querySelector(".scissors").addEventListener("click", function () {
-  document.querySelector(".overlay").style.display = "none";
-});
