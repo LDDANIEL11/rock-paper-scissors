@@ -149,8 +149,8 @@ img {
   width: 1000px;
   height: 500px;
   /*these two lines down here make the overlay appear or disappear*/
-  background-color: none;
-  backdrop-filter: none;
+  background-color: rgb(0, 0, 0);
+  backdrop-filter: blur(5px);
   z-index: 5;
 }
 
@@ -160,9 +160,11 @@ img {
   font-size: 20px;
 }
 
-.rps {
+.rock,
+.paper,
+.scissors {
   /*this display makes the button appear or disappear*/
-  display: none;
+  display: flex;
   width: 250px;
   height: 400px;
   margin-top: 200px;
@@ -172,4 +174,30 @@ img {
   padding: 0;
   margin: 0;
   background-color: white;
+}
+
+/*this overlay window is for when user either wins or lose !*/
+.resualt {
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 350px;
+  height: 150px;
+  background-color: green;
+  border: 8px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 8px;
+  font-size: 45px;
+  font-weight: 900;
+  backdrop-filter: blur(10px);
+  z-index: 5;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
