@@ -68,25 +68,37 @@ let pcHand = "";
 let userHand = "";
 document.querySelector(".user-score").textContent = userScore;
 document.querySelector(".pc-score").textContent = pcScore;
-
-//random choice for pc
-let rand = Math.floor(Math.random() * 3) + 1;
-
-//game start , by hitting play button
-document.querySelector(".play").addEventListener("click", function () {
-  document.querySelector(".overlay").style.display = "flex";
-});
-
-//game start buttons after user clicks play button !
 let image = document.getElementById("image");
 let egami = document.getElementById("egami");
+
+//game start , by hitting play button
+
+document.querySelector(".play").addEventListener("click", function () {
+  //creating random choices for computers hand
+  let rand = Math.floor(Math.random() * 3) + 1;
+
+  document.querySelector(".overlay").style.display = "flex";
+  document.querySelector(".pc-hand").style.padding = "85px";
+  egami.style.display = "flex";
+
+  if (rand == 1) {
+    egami.src = "rock.png";
+  } else if (rand == 2) {
+    egami.src = "paper.png";
+  } else {
+    egami.src = "scissors.png";
+  }
+});
+
+//game play buttons after user clicks play button !
+
 //clicking Rock :
 document.querySelector(".rock").addEventListener("click", function () {
   document.querySelector(".overlay").style.display = "none";
   image.src = "rock.png";
   document.querySelector(".user-hand").style.padding = "85px";
   document.querySelector(".img").style.display = "flex";
-  if (egami.src == "siccors.png") {
+  if (egami.src == "scissors.png") {
     userScore++;
     if (userScore == 10) {
       document.querySelector(".resualt").style.display = "flex";
@@ -144,13 +156,3 @@ document.querySelector(".scissors").addEventListener("click", function () {
     }
   }
 });
-
-const play = function () {
-  if (rand == 1) {
-    pcHand = "rock";
-  } else if (rand == 2) {
-    pcHand = "paper";
-  } else {
-    pcHand = "scissors";
-  }
-};
