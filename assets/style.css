@@ -48,13 +48,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: black;
-  padding: 200px;
+  background-color: white;
+  padding: 85px;
   margin-top: 50px;
   border: 5px;
   border-style: solid;
   border-radius: 8px;
-  border-color: white;
+  border-color: black;
 }
 
 .play {
@@ -123,4 +123,9 @@ body {
   border-style: solid;
   border-radius: 8px;
   border-color: coral;
+}
+
+img {
+  width: 175px;
+  height: 250px;
 }
