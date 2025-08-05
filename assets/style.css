@@ -1,3 +1,126 @@
 body {
-  background-color: gray;
+  background-color: rgb(52, 52, 52);
+  font-family: "pixel";
+}
+
+.player-name {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.user.name {
+  font-weight: 700;
+  margin-right: auto;
+  margin-left: 283px;
+  background-color: black;
+  color: cyan;
+  padding: 16px 32px;
+  border: 5px;
+  border-color: cyan;
+  border-style: solid;
+  border-radius: 8px;
+}
+
+.pc.name {
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: 268px;
+  background-color: black;
+  color: red;
+  padding: 16px 32px;
+  border: 5px;
+  border-color: red;
+  border-style: solid;
+  border-radius: 8px;
+}
+
+.battle {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.user-hand,
+.pc-hand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  padding: 200px;
+  margin-top: 50px;
+  border: 5px;
+  border-style: solid;
+  border-radius: 8px;
+  border-color: white;
+}
+
+.play {
+  background-color: green;
+  color: black;
+  font-weight: bolder;
+  font-size: 25px;
+  border: 5px;
+  border-style: solid;
+  border-radius: 8px;
+  border-color: black;
+  padding: 16px 32px;
+}
+
+.scoresets {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.user-score,
+.pc-score {
+  border: 5px;
+  border-style: solid;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 25px;
+  padding: 16px 100px;
+  background-color: black;
+  margin-top: 30px;
+}
+
+.user-score {
+  border-color: blue;
+  color: blue;
+}
+
+.pc-score {
+  border-color: purple;
+  color: purple;
+}
+
+.again.button {
+  padding: 16px 32px;
+  margin: 0px 35px;
+  font-weight: 900;
+  font-size: 15px;
+  border: 5px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: black;
+  background-color: brown;
+  color: black;
+}
+
+.footer-credit {
+  background-color: coral;
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: 3px;
+  border-style: solid;
+  border-radius: 8px;
+  border-color: coral;
 }
