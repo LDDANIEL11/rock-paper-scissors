@@ -49,3 +49,73 @@ const computerSelection = getComputerChoice();
 
 playRound(computerSelection, humanSelection);
 */
+let userScore = 0;
+let pcScore = 0;
+let resualt = document.querySelector(".resualt").textContent;
+let pcHand = "";
+let userHand = "";
+
+document.querySelector(".play").addEventListener("click", function () {
+  document.querySelector(".overlay").style.display = "flex";
+  document.querySelector(".rock").style.display = "flex";
+  document.querySelector(".paper").style.display = "flex";
+  document.querySelector(".scissors").style.display = "flex";
+  document.querySelector("");
+});
+
+const scores = function () {
+  userScore = 0;
+  pcScore = 0;
+  document.querySelector(".user-score").textContent = userScore;
+  document.querySelector(".pc-score").textContent = pcScore;
+
+  for (let i = 0; i <= 10; i++) {
+    if (
+      (userHand == "rock" && pcHand == "scissors") ||
+      (userHand == "paper" && pcHand == "rock") ||
+      (userHand == "scissors" && pcHand == "paper")
+    ) {
+      userScore += 1;
+      document.querySelector(".body").Style.backgroundcolor = "#2c8810ff";
+    } else if (
+      (pcHand == "rock" && userHand == "scissors") ||
+      (pcHand == "paper" && userHand == "rock") ||
+      (pcHand == "scissors" && userHand == "paper")
+    ) {
+      pcScore += 1;
+      document.querySelector(".body").style.backgroundcolor = "#c01313ff";
+    } else if (userScore == 10) {
+      document.querySelector(".resualt").style.display = "flex";
+    } else if (pcScore == 10) {
+      document.querySelector(".resualt").style.display = "flex";
+      document.querySelector(".resualt").style.backgroundcolor = "#c01313ff";
+      resualt = "Lose !";
+    }
+  }
+};
+
+const play = function () {
+  let rand = Math.floor(Math.random() * 3) + 1;
+
+  if (rand == 1) {
+    pcHand = "rock";
+  } else if (rand == 2) {
+    pcHand = "paper";
+  } else {
+    pcHand = "scissors";
+  }
+};
+
+//gae start buttons after user clicks play button !
+document.querySelector(".rock").addEventListener("click", function () {
+  document.querySelector(".overlay").style.display = "none";
+  document.querySelector(".img").src = `./assets/rock.png`;
+});
+document.querySelector(".paper").addEventListener("click", function () {
+  document.querySelector(".overlay").style.display = "none";
+  document.querySelector(".img").src = `./assets/paper.png`;
+});
+document.querySelector(".scissors").addEventListener("click", function () {
+  document.querySelector(".overlay").style.display = "none";
+  document.querySelector(".img").src = `./assets/scissors.png`;
+});
