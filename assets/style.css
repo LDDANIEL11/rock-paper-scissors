@@ -1,7 +1,6 @@
 body {
   /*change this background to green when user win and redd when user loose*/
   background-color: rgb(52, 52, 52);
-  font-family: "pixel";
 }
 
 .player-name {
@@ -128,14 +127,15 @@ body {
   border-color: coral;
 }
 
-.pic {
-  display: none;
-}
-
-img {
+.img {
   /*remove this line to make pics appear*/
+  display: none;
   width: 175px;
   height: 250px;
+  border: 3px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 8px;
 }
 
 .overlay {
@@ -157,16 +157,9 @@ img {
   border-radius: 8px;
 }
 
-.choose {
-  font-weight: 900;
-  color: black;
-  font-size: 20px;
-}
-
 .rock,
 .paper,
 .scissors {
-  /*this display makes the button appear or disappear*/
   display: flex;
   align-items: center;
   justify-content: center;
