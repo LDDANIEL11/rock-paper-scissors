@@ -1,6 +1,8 @@
-console.log("Hello, World!");
-//chhecking the link for script tag works or not
+"use strict";
 
+/*these codes are for the concept of rock paper scissors on the console , we will use these for better understanding the game in the new version that i personally created it from scratch with my own sick ideas :)*/
+
+/*
 let humanScore = 0;
 let computerScore = 0;
 let pcHand = "";
@@ -46,3 +48,4 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(computerSelection, humanSelection);
+*/
