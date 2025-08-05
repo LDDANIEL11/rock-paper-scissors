@@ -57,10 +57,6 @@ let userHand = "";
 
 document.querySelector(".play").addEventListener("click", function () {
   document.querySelector(".overlay").style.display = "flex";
-  document.querySelector(".rock").style.display = "flex";
-  document.querySelector(".paper").style.display = "flex";
-  document.querySelector(".scissors").style.display = "flex";
-  document.querySelector("");
 });
 
 const scores = function () {
@@ -106,16 +102,13 @@ const play = function () {
   }
 };
 
-//gae start buttons after user clicks play button !
+//game start buttons after user clicks play button !
 document.querySelector(".rock").addEventListener("click", function () {
   document.querySelector(".overlay").style.display = "none";
-  document.querySelector(".img").src = `./assets/rock.png`;
 });
 document.querySelector(".paper").addEventListener("click", function () {
   document.querySelector(".overlay").style.display = "none";
-  document.querySelector(".img").src = `./assets/paper.png`;
 });
 document.querySelector(".scissors").addEventListener("click", function () {
   document.querySelector(".overlay").style.display = "none";
-  document.querySelector(".img").src = `./assets/scissors.png`;
 });
