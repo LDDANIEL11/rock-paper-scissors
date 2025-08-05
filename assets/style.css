@@ -1,4 +1,5 @@
 body {
+  /*change this background to green when user win and redd when user loose*/
   background-color: rgb(52, 52, 52);
   font-family: "pixel";
 }
