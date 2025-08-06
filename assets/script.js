@@ -64,7 +64,7 @@ playRound(computerSelection, humanSelection);
 let userScore = 0;
 let pcScore = 0;
 
-let resualt = document.querySelector(".resualt").textContent;
+let result = document.querySelector(".result").textContent;
 
 let image = document.getElementById("image");
 let egami = document.getElementById("egami");
@@ -100,14 +100,14 @@ document.querySelector(".rock").addEventListener("click", function () {
     userScore++;
     document.querySelector(".user-score").textContent = userScore;
     if (userScore == 10) {
-      document.querySelector(".resualt").style.display = "flex";
+      document.querySelector(".result").style.display = "flex";
     }
   } else if (rand == 2) {
     pcScore++;
     document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
-      document.querySelector(".resualt").style.backgroundcolor = "#c01313ff";
-      document.querySelector(".resualt").style.display = "flex";
+      document.querySelector(".result").style.backgroundcolor = "#c01313ff";
+      document.querySelector(".result").style.display = "flex";
       resualt = "Lose !";
     }
   }
@@ -125,14 +125,14 @@ document.querySelector(".paper").addEventListener("click", function () {
     userScore++;
     document.querySelector(".user-score").textContent = userScore;
     if (userScore == 10) {
-      document.querySelector(".resualt").style.display = "flex";
+      document.querySelector(".result").style.display = "flex";
     }
   } else if (rand == 3) {
     pcScore++;
     document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
-      document.querySelector(".resualt").style.backgroundcolor = "#c01313ff";
-      document.querySelector(".resualt").style.display = "flex";
+      document.querySelector(".result").style.backgroundcolor = "#c01313ff";
+      document.querySelector(".result").style.display = "flex";
       resualt = "Lose !";
     }
   }
@@ -150,14 +150,14 @@ document.querySelector(".scissors").addEventListener("click", function () {
     userScore++;
     document.querySelector(".user-score").textContent = userScore;
     if (userScore == 10) {
-      document.querySelector(".resualt").style.display = "flex";
+      document.querySelector(".result").style.display = "flex";
     }
   } else if (rand == 1) {
     pcScore++;
     document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
-      document.querySelector(".resualt").style.backgroundcolor = "#c01313ff";
-      document.querySelector(".resualt").style.display = "flex";
+      document.querySelector(".result").style.backgroundcolor = "#c01313ff";
+      document.querySelector(".result").style.display = "flex";
       resualt = "Lose !";
     }
   }
