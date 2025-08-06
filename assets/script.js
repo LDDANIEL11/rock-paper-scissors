@@ -163,5 +163,18 @@ document.querySelector(".scissors").addEventListener("click", function () {
   }
 });
 
+//Again Butoon eventlistner :
+document.querySelector(".again").addEventListener("click", function () {
+  document.querySelector(".result").style.display = "none";
+  document.querySelector(".overlay").style.display = "none";
+  image.style.display = "none";
+  egami.style.display = "none";
+  document.querySelector(".user-hand").style.padding = "215px 175px";
+  document.querySelector(".pc-hand").style.padding = "215px 175px";
+
+  document.querySelector(".user-score").textContent = 0;
+  document.querySelector(".pc-score").textContent = 0;
+});
+
 //console.log(userScore);
 //console.log(pcScore);
