@@ -183,7 +183,7 @@ body {
 }
 
 /*this overlay window is for when user either wins or lose !*/
-.resualt {
+.result {
   display: none;
   justify-content: space-evenly;
   align-items: center;
