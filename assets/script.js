@@ -63,11 +63,9 @@ playRound(computerSelection, humanSelection);
 //what we need to begin the game
 let userScore = 0;
 let pcScore = 0;
+
 let resualt = document.querySelector(".resualt").textContent;
-let pcHand = "";
-let userHand = "";
-document.querySelector(".user-score").textContent = userScore;
-document.querySelector(".pc-score").textContent = pcScore;
+
 let image = document.getElementById("image");
 let egami = document.getElementById("egami");
 
@@ -100,11 +98,13 @@ document.querySelector(".rock").addEventListener("click", function () {
   document.querySelector(".img").style.display = "flex";
   if (egami.src == "scissors.png") {
     userScore++;
+    document.querySelector(".user-score").textContent = userScore;
     if (userScore == 10) {
       document.querySelector(".resualt").style.display = "flex";
     }
-  } else if ((egami.src = "paper.png")) {
+  } else if (egami.src == "paper.png") {
     pcScore++;
+    document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
       document.querySelector(".resualt").style.backgroundcolor = "#c01313ff";
       document.querySelector(".resualt").style.display = "flex";
@@ -112,6 +112,7 @@ document.querySelector(".rock").addEventListener("click", function () {
     }
   }
 });
+
 //clicking Paper :
 document.querySelector(".paper").addEventListener("click", function () {
   document.querySelector(".overlay").style.display = "none";
@@ -122,11 +123,13 @@ document.querySelector(".paper").addEventListener("click", function () {
 
   if (egami.src == "rock.png") {
     userScore++;
+    document.querySelector(".user-score").textContent = userScore;
     if (userScore == 10) {
       document.querySelector(".resualt").style.display = "flex";
     }
   } else if (egami.src == "scissors.png") {
     pcScore++;
+    document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
       document.querySelector(".resualt").style.backgroundcolor = "#c01313ff";
       document.querySelector(".resualt").style.display = "flex";
@@ -134,6 +137,7 @@ document.querySelector(".paper").addEventListener("click", function () {
     }
   }
 });
+
 //clicking Scissors :
 document.querySelector(".scissors").addEventListener("click", function () {
   document.querySelector(".overlay").style.display = "none";
@@ -144,11 +148,13 @@ document.querySelector(".scissors").addEventListener("click", function () {
 
   if (egami.src == "paper.png") {
     userScore++;
+    document.querySelector(".user-score").textContent = userScore;
     if (userScore == 10) {
       document.querySelector(".resualt").style.display = "flex";
     }
   } else if (egami.src == "rock.png") {
     pcScore++;
+    document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
       document.querySelector(".resualt").style.backgroundcolor = "#c01313ff";
       document.querySelector(".resualt").style.display = "flex";
@@ -156,3 +162,6 @@ document.querySelector(".scissors").addEventListener("click", function () {
     }
   }
 });
+
+//console.log(userScore);
+//console.log(pcScore);
