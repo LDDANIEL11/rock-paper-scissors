@@ -96,13 +96,13 @@ document.querySelector(".rock").addEventListener("click", function () {
   image.src = "rock.png";
   document.querySelector(".user-hand").style.padding = "85px";
   document.querySelector(".img").style.display = "flex";
-  if (egami.src == "scissors.png") {
+  if (rand == 3) {
     userScore++;
     document.querySelector(".user-score").textContent = userScore;
     if (userScore == 10) {
       document.querySelector(".resualt").style.display = "flex";
     }
-  } else if (egami.src == "paper.png") {
+  } else if (rand == 2) {
     pcScore++;
     document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
@@ -121,13 +121,13 @@ document.querySelector(".paper").addEventListener("click", function () {
 
   document.querySelector(".img").style.display = "flex";
 
-  if (egami.src == "rock.png") {
+  if (rand == 1) {
     userScore++;
     document.querySelector(".user-score").textContent = userScore;
     if (userScore == 10) {
       document.querySelector(".resualt").style.display = "flex";
     }
-  } else if (egami.src == "scissors.png") {
+  } else if (rand == 3) {
     pcScore++;
     document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
@@ -146,13 +146,13 @@ document.querySelector(".scissors").addEventListener("click", function () {
 
   document.querySelector(".img").style.display = "flex";
 
-  if (egami.src == "paper.png") {
+  if (rand == 2) {
     userScore++;
     document.querySelector(".user-score").textContent = userScore;
     if (userScore == 10) {
       document.querySelector(".resualt").style.display = "flex";
     }
-  } else if (egami.src == "rock.png") {
+  } else if (rand == 1) {
     pcScore++;
     document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
