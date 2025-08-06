@@ -64,16 +64,14 @@ playRound(computerSelection, humanSelection);
 let userScore = 0;
 let pcScore = 0;
 
-let result = document.querySelector(".result").textContent;
-
 let image = document.getElementById("image");
 let egami = document.getElementById("egami");
-
+let rand = 0;
 //game start , by hitting play button
 
 document.querySelector(".play").addEventListener("click", function () {
   //creating random choices for computers hand
-  let rand = Math.floor(Math.random() * 3) + 1;
+  rand = Math.floor(Math.random() * 3) + 1;
 
   document.querySelector(".overlay").style.display = "flex";
   document.querySelector(".pc-hand").style.padding = "85px";
@@ -106,9 +104,9 @@ document.querySelector(".rock").addEventListener("click", function () {
     pcScore++;
     document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
-      document.querySelector(".result").style.backgroundcolor = "#c01313ff";
+      document.querySelector(".result").textContent = "Lose !";
       document.querySelector(".result").style.display = "flex";
-      resualt = "Lose !";
+      document.querySelector(".result").style.backgroundColor = "#8f1818ff";
     }
   }
 });
@@ -131,9 +129,9 @@ document.querySelector(".paper").addEventListener("click", function () {
     pcScore++;
     document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
-      document.querySelector(".result").style.backgroundcolor = "#c01313ff";
+      document.querySelector(".result").textContent = "Lose !";
       document.querySelector(".result").style.display = "flex";
-      resualt = "Lose !";
+      document.querySelector(".result").style.backgroundColor = "#8f1818ff";
     }
   }
 });
@@ -156,15 +154,18 @@ document.querySelector(".scissors").addEventListener("click", function () {
     pcScore++;
     document.querySelector(".pc-score").textContent = pcScore;
     if (pcScore == 10) {
-      document.querySelector(".result").style.backgroundcolor = "#c01313ff";
+      document.querySelector(".result").textContent = "Lose !";
       document.querySelector(".result").style.display = "flex";
-      resualt = "Lose !";
+      document.querySelector(".result").style.backgroundColor = "#8f1818ff";
     }
   }
 });
 
 //Again Butoon eventlistner :
 document.querySelector(".again").addEventListener("click", function () {
+  userScore = 0;
+  pcScore = 0;
+  document.querySelector(".result").textContent = "Win !";
   document.querySelector(".result").style.display = "none";
   document.querySelector(".overlay").style.display = "none";
   image.style.display = "none";
