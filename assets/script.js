@@ -166,6 +166,7 @@ document.querySelector(".again").addEventListener("click", function () {
   userScore = 0;
   pcScore = 0;
   document.querySelector(".result").textContent = "Win !";
+  document.querySelector(".result").style.backgroundColor = "rgb(0,128,0)";
   document.querySelector(".result").style.display = "none";
   document.querySelector(".overlay").style.display = "none";
   image.style.display = "none";
